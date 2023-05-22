@@ -1,0 +1,60 @@
+Git & GitHub:
+
+ssh-keygen -t rsa -b 4096 -C correo	Generación de llaves criptográficas ligadas a un correo electrónico para uso con git hub 
+ssh-add ~/.ssh/id_rsa	Añadir clave privada al manejador de llaves
+Git config -l	Información de configuración 
+Git config —global [var] [dato]	Cambiar algún dato de la configuración inicial de git
+Init	Crear repositorio sobre carpeta (repositorio)
+Status	Ver cambios en archivos
+Add .	Agregar archivos al repositorio (se puede solo uno) (staging)
+Commit (-m “comment”)	Agregar version al repositorio desde staging, para salir de Vim usar Esc + shift + ZZ
+Diff [V1] [V2]	Ver cambios entre versiones (cuidado con orden)
+Reset [Vx]	Volver a versiones anteriores —hard: toda la versión y borra todo lo siguiente —soft: sigue existiendo staging
+Reset HEAD	Borra los archivos de staging para que no los envié a un nuevo commit
+Log	Ver todas las versiones con su indicador
+Log —stat	Ver cambios particulares entre versiones, para salir oprimir [Q]
+Log —all —graph —decorate —oneline	Mostrar todo el proyecto con ramas de forma decorada y comprimida 
+Checkout [Vcx] [file]	Traer cambios hacia mi carpeta master, puedo pedir el archivo de master usando master en [Vx], no modifica los otros archivos
+Rm —cached	Borra archivos de repositorio local y staging, deja de trackear
+Rm —force	Borra archivos de disco duro
+Clone url	Traer datos de un servidor remoto a repositorio local
+Push	Enviar mi repositorio local a el servidor remoto
+Fetch	Traer desde servidor remoto a mi repositorio local, no a mi directorio
+Pull	Hacer fetch y merge al tiempo
+pull origin master —allow-unrelated-histories	De esta forma se permite fusionar lo remoto y lo local
+Merge	Fusionar versión del repositorio local a mi directorio de trabajo
+Branch name	Crear una nueva rama a partir de la actual, sin name muestra las ramas actuales
+Checkout [rama]	Puedo moverme a una rama diferente creada previamente 
+Remote origin Http	Crear relación con un repositorio remoto en origen para poder interactuar luego
+Remote -v	Mostar repositorio remoto en forma verbal 
+Alias name=“comando”	Crear un comando reducido
+Tag	Ver los tags creados
+Show-ref —tags	Ver tags con sus respectivos hash 
+Tag -a name -m “msj” Hash	Agregar un tag relacionado a un commit mediante su hash 
+Tag -d name 	Borrar un tag 
+Push origin :refs/tags/name	Borrar un tag del repositorio online dado que no se borra automático
+Push origin —tags	Enviar los tags a repositorio remoto
+Show-branch —all	Mostrar todas las ramas existentes
+Gitk 	Abre programa de ayuda para ver flujo de trabajo en git
+Clone http	Copiar repositorio remoto a mi carpeta local (solo públicos)
+[CRTL] + [shift] + R	Actualizar cache de git hub
+Rebase rama	Pegar una rama a otra, primero rebase a la que se creo y luego a la original
+Stash	Crea un estado de work in progress, permitiéndome ir a otras ramas sin perder El Progreso actual
+Stash pop	Trae el trabajo guardado antes
+Stash list	Ver la lista de rimas guardadas
+Stash branch name	Agregar estado de trabajo en espera a una nueva rama 
+Stash drop	Borrar el estado de trabajo temporal
+Clean —dry—run	Simular lo que se va a borrar en una lista, no sirve en carpetas y en archivos de .gitignore
+Clean -f	Borra lo indicado
+Cherry-pick hash	Traer un commit de una rama a otra, no es buena práctica 
+Commit —amend	Remendar un commit anterior con nueva información 
+Reflog 	Revisar todo el entorno trabajado para restablecer, ayuda con RESET con el hash de commit deseado 
+Grep -n word	Buscar donde aparece la palabra y en qué línea
+Grep -c word	Buscar cuantas veces aparece la palabra y donde
+Log -n word	Buscar cuantas veces se usa la palabra en los commits 
+Shortlog 	Ver commit de Los colaboradores
+Shortlog -sn —all	Ver cuantos commit ha hecho cada colaborador 
+Shortlog -sn —all —no-merges	Commits sin merges de colaboradores 
+Config —global alias.name “command”	Creación de comandos personalizados para git 
+Blame -c File	Ver modificaciones de archivos según colaborador 
+Branch -a	Ver todas las ramas en local y en remoto
