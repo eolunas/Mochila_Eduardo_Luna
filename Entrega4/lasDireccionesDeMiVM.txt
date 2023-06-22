@@ -1,0 +1,7 @@
+DIreccion IP privada: 200.118.60.75
+Direccion IP Publica: 10.0.2.15
+DIreccion MAC: 08:00:27:5f:0b:fb
+
+- Diferentes IP publica y privada en HOST: las IP privadas son diferentes ya que
+  corresponden a cada uno de los computadores, mientras que la publica si es 
+  igual en las dos, ya que es el mismo punto de conexion.
